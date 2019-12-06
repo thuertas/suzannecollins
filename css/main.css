@@ -1,0 +1,267 @@
+/*                                  CONTENT 
+1. FONTS SETUP
+2. NEW CLASSES
+3. OVERWRITING FOUNDATION'S STYLE
+    2.1 Colors
+    2.2 Header
+    2.3 Body
+    2.4 Footer 
+    2.5 orbit 
+    2.6 input
+    2.7 buttons
+    2.8 Menu for small screens
+*/
+/*-----------------------------------------------------------------------*/
+
+/* ------------------------------------------
+        1. FONTS SETUP
+------------------------------------------ */
+h1, h2, h3, h4 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+}
+
+h5, h6, a, .button, input::placeholder { font-family: 'Alatsi', sans-serif; }
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+/* ------------------------------------------
+        2. NEW CLASSES
+------------------------------------------ */
+#content .content-column {
+    padding-top: 10px;
+}
+
+.search-input {
+    display: inline;
+    text-transform: uppercase;
+}
+
+.search-input .text-input {
+    width: 100%;
+}
+
+.text-input {
+    display: inline-flex;
+}
+
+p .question {
+    font-family: 'Alatsi', sans-serif;
+    color: #FF9A06;
+    text-transform: uppercase;
+}
+
+.highlight {
+    font-family: 'Alatsi', sans-serif;
+    color: #FF9A06;
+    text-transform: uppercase;
+}
+
+/*This class is to have section anchors and don't overlap them with the sticky header >>for the works page*/
+.section-anchor:target::before {
+    content: "";
+    display: block;
+    height: 160px; /* sticky header height*/
+    margin: -160px 0 0; /* negative sticky header height */
+}
+
+/* ------------------------------------------
+        3. EDITING FOUNDATION'S STYLE
+------------------------------------------ */
+/*-------------Colors-------------*/
+.callout.primary {
+    background-color: #FFFFFF;
+    color: #888888;
+}
+
+.nav-block {
+    background-color: #FFFFFF;
+}
+
+.nav-block a, footer a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-block a:hover, footer a:hover {
+    color: #888888;
+    background-color: none;
+}
+
+a {
+    color: #FF9A06;
+}
+
+a:hover, a:focus {
+    color: #FFB54A;
+}
+
+.nav-block .is-active a {
+    background-color: #FF9A06;
+}
+
+.button {
+    background-color: #FF9A06;
+    color: #FFFFFF;
+}
+
+.button:hover, .button.primary:hover, .button:focus, .button.primary:focus {
+    background-color: #FFB54A;
+}
+
+h4 small {
+    color: #888888;
+}
+
+.content-column.medium-4 {
+    background-color: #FFF0D9;
+}
+
+footer .copyright {
+    background-color: #E3E7DA;
+}
+
+/*-------------Header-------------*/
+.callout {
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+.callout.primary img {
+    width: 500px;
+}
+
+.callout.large {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nav-block {
+    border-bottom: 2px solid #E3E7DA;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.nav-block .menu a {
+    margin: 0 10px 0 10px;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+/*-------------Body-------------*/
+.row {
+    margin-left: 0;
+    margin-left: 0;
+    max-width: 100%;
+}
+
+.blog-post.align-center.text-center img {
+    height: 260px;
+}
+
+.no-bullet.menu.vertical a {
+    text-transform: capitalize;
+    padding: 5px 16px !important;
+    font-size: 18px;
+}
+
+/*the following is to make the left-side-corners of the search input rounded*/
+.search-input .text-input input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+hr {
+    border-top: 2px solid #888888;
+    margin: 0;
+}
+
+.docs-toc {
+    padding-right: 0;
+    margin-bottom: -50rem;
+    z-index: 0;
+}
+/*-------------Footer-------------*/
+footer {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    z-index: 10;
+}
+
+footer small {
+    text-transform: capitalize;
+}
+
+footer .callout.secondary {
+    background-color: #FFFFFF;
+    border: 1px solid #707070;
+}
+
+/*-------------Orbit > Slider in the Homepage-------------*/
+.orbit {z-index: 1}
+.orbit-bullets button {
+    background-color: #FFF0D9;
+    border: 1px solid #707070;
+    width: 15px;
+    height: 15px;
+}
+.orbit-bullets button:hover          {background-color: #FFB54A; }
+.orbit-bullets button.is-active      {background-color: #FF9A06; }
+.orbit-previous img, .orbit-next img {max-width: 15px; }
+
+/*-------------Input-------------*/
+input::-webkit-calendar-picker-indicator {display: none; } /*to remove the arrow of the datalist*/
+
+/*the following is to make the left-side-corners of the email input rounded*/
+footer .text-input input[type=email] {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/*-------------Buttons-------------*/
+.button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.button.primary {
+    border-radius: 50px;
+    background-color: #FF9A06;
+    margin: 0 auto;
+}
+
+/*-------------Menu for small screens-------------*/
+/*for the burger menu button >> only small screens*/
+.title-bar .title-bar-left button {
+    right: 20px;
+}
+
+.title-bar .title-bar-right {
+    width: 20px;
+}
+
+.burger-icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.search {
+    right: 8px;
+    position: absolute;
+    top: 21px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.top-bar-menu li a {
+    font-size: 18px;
+}
